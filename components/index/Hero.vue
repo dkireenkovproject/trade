@@ -4,7 +4,7 @@
       <div class="hero__wrap">
       <p class="hero__descr">
       Mark Trade Company is a direct importer of fruits and vegetables from Egypt, South Africa, Chile, Argentina and China</p>
-      <p class="hero__descr">Our company is an importer and is registered at customs posts in countries such as Germany, Italy, Spain, the Czech Republic and Ukraine.</p>
+      <p class="hero__descr">Our company is an importer and is registered at customs posts in countries such as Germany, Italy, Spain, the Czech Republic.</p>
       <p class="hero__descr">We have our own funds to service this volume of imported goods.</p>
     </div>
     </div>
