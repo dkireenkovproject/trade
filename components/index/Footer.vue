@@ -80,7 +80,7 @@ justify-content: center;
 @media (max-width: 738px) {
   align-items: center;
    }
-   @media (max-width: 372px) {
+   @media (max-width: 520px) {
     align-items: flex-start;
 }
   }
@@ -88,7 +88,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 372px) {
+    @media (max-width: 520px) {
       justify-content: flex-start;
 }
   }
@@ -96,7 +96,7 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 372px) {
+    @media (max-width: 520px) {
       align-items: flex-start;
 }
   }
