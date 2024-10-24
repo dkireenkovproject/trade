@@ -9,16 +9,22 @@ const { $api } = useNuxtApp();
 const useRepo = repositoryApi($api);
 
 useHead({
-  title: 'Главная страница | Мой Сайт',
+  title: 'Home page | Mark Trade',
   meta: [
   {
           hid: 'og:description',
           property: 'og:description',
           content:
-            'Описание главной страницы моего сайта',
+            'Mark Trade Company is a direct importer of fruits and vegetables from Egypt, South Africa, Chile, Argentina and China',
         },
-  { name: 'description', content: 'Описание главной страницы моего сайта' },
-	{ name: 'keywords', content: 'ключевые слова для главной страницы' }
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content:
+            'Home page | Mark Trade',
+        },
+  { name: 'description', content: 'Mark Trade Company is a direct importer of fruits and vegetables from Egypt, South Africa, Chile, Argentina and China' },
+	{ name: 'keywords', content: 'Mark Trade, Egypt, South Africa, Chile, Argentina, China' }
   ]
 })
 </script>
