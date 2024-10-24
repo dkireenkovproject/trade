@@ -23,26 +23,39 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 750px;
+    @media (max-width: 798px) {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/header-logo.jpg');
+      min-height: 450px;
+    }
+    @media (max-width: 520px) {
+      min-height: 350px;
+  }
+  @media (max-width: 400px) {
+      min-height: 300px;
+  }
   }
   &__wrap {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
-    max-width: 600px;
-    width: 100%;
+    right: 3%;    // Сдвигаем блок с текстом ближе к левой стороне
+    transform: translateY(-50%);
+    max-width: 700px;
+    width: 90vw;       // Используем 90% ширины экрана
   }
   &__descr {
+    width: 100%;
     margin-bottom: 15px;
+    text-align: left;   // Выравниваем текст по левому краю
     color:#69cc8c;
-font-size: 18px;
-font-style: normal;
-font-family: 'Inter';
+    font-size: calc(1.2vw + 12px); // Шрифт адаптивныйfont-family: 'Inter';
 font-weight: 400;
 letter-spacing: 0.6px;
 &:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 798px) {
+  font-weight: 700;
 }
   }
 }

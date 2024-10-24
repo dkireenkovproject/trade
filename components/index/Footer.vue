@@ -3,10 +3,10 @@
     <div class="container">
       <div class="footer__wrap">
         <div class="footer__content-1">
-          <span class="footer__title">CONTACT US</span>
+          <span class="footer__title">Navigation</span>
           <ul class="list-reset footer__list">
-            <li class="footer__item"><a class="footer__link" href="mailto:contact@mail.com">Contact1@marktrade.com</a></li>
-            <li class="footer__item"><a class="footer__link" href="mailto:contact@mail.com">Contact2@marktrade.com</a></li>
+            <li class="footer__item"><NuxtLink class="footer__link" to="/contacts">Contacts</NuxtLink></li>
+            <li class="footer__item"><NuxtLink class="footer__link" to="/about">About</NuxtLink></li>
           </ul>
           </div>
         <div class="footer__content-2"> 
@@ -16,9 +16,9 @@
         <div class="footer__content-3">
           <span class="footer__title">JOIN OUR COMMUNITY</span>
           <ul class="list-reset footer__list-2">
-            <li class="footer__item"><a class="footer__link" href="mailto:contact@mail.com"><img class="footer__logo" src="/img/Facebook.png"></a></li>
-            <li class="footer__item"><a class="footer__link" href="mailto:contact@mail.com"><img class="footer__logo" src="/img/Telegram.png"></a></li>
-            <li class="footer__item"><a class="footer__link" href="mailto:contact@mail.com"><img class="footer__logo" src="/img/Instagram.png"></a></li>
+            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Facebook.png"></a></li>
+            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Telegram.png"></a></li>
+            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Instagram.png"></a></li>
           </ul>
         </div>
       </div>
@@ -37,30 +37,68 @@
   &__wrap {
 display: grid;
 grid-template-columns: repeat(12, 1fr);
+width: 100%;
   }
   &__content-1 {
     grid-column: 1 / span 4;
+     @media (max-width: 738px) {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+    margin-bottom: 30px;
+   }
+   @media (max-width: 372px) {
+    margin-bottom: 20px;
+}
   }
   &__content-2 {
-    grid-column: 6 / span 2;
+    grid-column: 5 / span 2;
+    @media (max-width: 1330px) {
+    grid-column: 8 / span 5;
+   }
+   @media (max-width: 738px) {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 2;
+    margin-bottom: 50px;
+
+   }
   }
   &__content-3 {
-    grid-column: 10 / span 3;
+    grid-column: 9 / span 4;
+   @media (max-width: 1330px) {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 2;
+   }
+   @media (max-width: 738px) {
+    grid-column: 1 / span 12;
+    grid-row: 3 / span 3;
+   }
   }
   &__content-1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+justify-content: center;
+@media (max-width: 738px) {
+  align-items: center;
+   }
+   @media (max-width: 372px) {
+    align-items: flex-start;
+}
   }
   &__content-2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 372px) {
+      justify-content: flex-start;
+}
   }
   &__content-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 372px) {
+      align-items: flex-start;
+}
   }
   &__title {
     margin-bottom: 10px;
@@ -70,7 +108,13 @@ font-style: normal;
 font-family: 'Inter';
 font-weight: 400;
 letter-spacing: 0.6px;
-text-decoration: none;
+text-decoration: underline;
+@media (max-width: 738px) {
+  font-size: 20px;
+   }
+   @media (max-width: 372px) {
+  font-size: 18px;
+}
   }
   &__link {
     color:#fff;
@@ -80,10 +124,18 @@ font-family: 'Inter';
 font-weight: 400;
 letter-spacing: 0.6px;
 text-decoration: none;
+@media (max-width: 372px) {
+  font-size: 18px;
+}
   }
   &__list-2 {
     display: flex;
     gap: 7px;
+  }
+  &__logo {
+    @media (max-width: 738px) {
+width: 30px;
+height: 30px;   }
   }
 }
 </style>
