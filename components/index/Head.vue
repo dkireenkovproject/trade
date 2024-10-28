@@ -2,7 +2,7 @@
   <section class="header">
     <div class="container">
       <div class="header__wrap">
-      <div class="header__contect"><NuxtLink class="header__logo-link" to="/"><img class="header__logo" src="/img/logo.png"><h1 class="header__title">Mark Trade</h1></NuxtLink></div>
+      <div class="header__contect"><NuxtLink class="header__logo-link" to="/"><img class="header__logo" src="/img/logo.png"><h1 class="header__title">Mark Trade Company L.L.C-FZ</h1></NuxtLink></div>
       <nav class="header__nav">
         <ul class="list-reset header__list"><li class="header__item"><NuxtLink to="/" class="header__link">Home</NuxtLink></li><li class="header__item"><NuxtLink to="/about" class="header__link">About</NuxtLink></li><li class="header__item"><NuxtLink to="/contacts" class="header__link">Contacts</NuxtLink></li></ul></nav>
     </div>
@@ -40,6 +40,7 @@ font-weight: 400;
 letter-spacing: 0.6px;
 @media (max-width: 690px) {
   font-size: 20px;
+  text-align: center;
    }
   }
   &__wrap {
