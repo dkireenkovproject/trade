@@ -31,7 +31,10 @@
         <textarea class="contacts__form-input-2" name="message" id="message" placeholder="Your message" required v-model="Yourmessage" autocomplete="off"></textarea>
       </div>
     </form>
-    <div class="contacts__btn-wrap"><button class="btn-reset contacts__btn" form="form" type="submit">Submit</button></div> 
+    <div class="contacts__btn-wrap"><transition name="fade" mode="out-in" appear><button v-if="load" class="btn-reset contacts__btn" form="form" type="submit">Submit</button>
+    <span v-else class="contacts__load-text">The message has been sent</span></transition>
+    </div> 
+
   </div>
 </div>
     </div>
@@ -45,7 +48,14 @@ const useRepo = repositoryApi($api);
 const Yourname = ref('')
 const Youremail = ref('')
 const Yourmessage = ref('')
+const load = ref(true)
 
+const buttonLoad = () => {
+  load.value = false;
+  setTimeout(() => {
+    load.value = true;
+  }, 4000);
+};
 const sendForm = async () => {
    const body = {
      name : Yourname.value,
@@ -56,6 +66,7 @@ const sendForm = async () => {
    try {
     await useRepo.sendContactForm(body);
    console.log('Message sent successfully')
+   buttonLoad();
      } 
    catch (error) {
     console.error('Error sending message:', error)
@@ -68,6 +79,13 @@ const sendForm = async () => {
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
 .contacts {
   padding-bottom: 100px;
   @media (max-width:676px) {
@@ -167,27 +185,11 @@ text-decoration: none;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 850px;
-//     @media (max-width: 1308px) {
-//       min-height: 750px;
-//     }
-//     @media (max-width: 1130px) {
-//       min-height: 650px;
-//     }
-//     @media (max-width: 966px) {
-//       min-height: 450px;
-//     }
-//     @media (max-width:676px) {
-//       min-height: 250px;
-//       background-image: url('/img/contacts-1.jpg');
-// }
   }
   &__wrap-items {
     display: flex;
     gap: 5px;
     align-items: center;
-//     @media (max-width:676px) {
-//       gap: 2px;
-// }
   }
   &__text {
     color:#0F3C1F;
@@ -268,6 +270,16 @@ text-decoration: none;
     @media (max-width: 390px) {
       font-size: 16px;
     }
+  }
+  &__load-text {
+    padding: 10.5px 0;
+    color:#0F3C1F;
+font-size: 18px;
+font-style: normal;
+font-family: 'Inter';
+font-weight: 400;
+letter-spacing: 0.6px;
+text-decoration: none;
   }
 }
 </style>

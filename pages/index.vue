@@ -9,7 +9,7 @@ const { $api } = useNuxtApp();
 const useRepo = repositoryApi($api);
 
 useHead({
-  title: 'Home page | Mark Trade',
+  title: 'Home page | Mark Trade Company L.L.C-FZ',
   meta: [
   {
           hid: 'og:description',

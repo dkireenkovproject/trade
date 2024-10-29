@@ -1,29 +1,28 @@
 <template>
-  <section class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer__wrap">
-        <div class="footer__content-1">
-          <span class="footer__title">Navigation</span>
+        <nav class="footer__content-1">
           <ul class="list-reset footer__list">
             <li class="footer__item"><NuxtLink class="footer__link" to="/contacts">Contacts</NuxtLink></li>
             <li class="footer__item"><NuxtLink class="footer__link" to="/about">About</NuxtLink></li>
           </ul>
-          </div>
+        </nav>
         <div class="footer__content-2"> 
-          <span class="footer__link">
-            Copyright 2024 MarkTrade</span>
+          <p class="footer__link-2">
+            &copy; 2024 MarkTrade</p>
         </div>
         <div class="footer__content-3">
           <span class="footer__title">JOIN OUR COMMUNITY</span>
           <ul class="list-reset footer__list-2">
-            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Facebook.png"></a></li>
-            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Telegram.png"></a></li>
-            <li class="footer__item"><a class="footer__link"><img class="footer__logo" src="/img/Instagram.png"></a></li>
+            <li class="footer__item"><a class="footer__link" target="_blank" rel="noopener noreferrer"><img class="footer__logo" src="/img/Facebook.png" alt="Facebook logo"></a></li>
+            <li class="footer__item"><a class="footer__link" target="_blank" rel="noopener noreferrer" href="https://t.me/+971585574405"><img class="footer__logo" src="/img/Telegram.png" alt="Telegram logo"></a></li>
+            <li class="footer__item"><a class="footer__link" target="_blank" rel="noopener noreferrer"><img class="footer__logo" src="/img/Instagram.png" alt="Instagram logo"></a></li>
           </ul>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script lang="ts" setup>
@@ -33,7 +32,7 @@
 <style scoped lang="scss">
 .footer {
   background: #0F3C1F;
-  padding: 60px 0 60px 0;
+  padding: 75px 0 75px 0;
   &__wrap {
 display: grid;
 grid-template-columns: repeat(12, 1fr);
@@ -103,7 +102,7 @@ justify-content: center;
   &__title {
     margin-bottom: 10px;
     color:#fff;
-font-size: 30px;
+font-size: 25px;
 font-style: normal;
 font-family: 'Inter';
 font-weight: 400;
@@ -117,6 +116,18 @@ text-decoration: underline;
 }
   }
   &__link {
+    color:#fff;
+font-size: 25px;
+font-style: normal;
+font-family: 'Inter';
+font-weight: 400;
+letter-spacing: 0.6px;
+text-decoration: none;
+@media (max-width: 372px) {
+  font-size: 18px;
+}
+  }
+&__link-2 {
     color:#fff;
 font-size: 20px;
 font-style: normal;

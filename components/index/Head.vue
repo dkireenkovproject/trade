@@ -1,5 +1,5 @@
 <template>
-  <section class="header">
+  <header class="header">
     <div class="container">
       <div class="header__wrap">
       <div class="header__contect"><NuxtLink class="header__logo-link" to="/"><img class="header__logo" src="/img/logo.png"><h1 class="header__title">Mark Trade Company L.L.C-FZ</h1></NuxtLink></div>
@@ -7,7 +7,7 @@
         <ul class="list-reset header__list"><li class="header__item"><NuxtLink to="/" class="header__link">Home</NuxtLink></li><li class="header__item"><NuxtLink to="/about" class="header__link">About</NuxtLink></li><li class="header__item"><NuxtLink to="/contacts" class="header__link">Contacts</NuxtLink></li></ul></nav>
     </div>
     </div>
-  </section>
+  </header>
 </template>
 
 <script lang="ts" setup>

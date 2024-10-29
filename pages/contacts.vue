@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 useHead({
-  title: 'Contacts | Mark Trade',
+  title: 'Contacts | Mark Trade Company L.L.C-FZ',
   meta: [
   {
           hid: 'og:description',
